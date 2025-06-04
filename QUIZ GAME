@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP2rP97E3YhuZRnrYIwA8Gm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ngaire44/DSF-FT13-Remote-Resourses/blob/main/QUIZ%20GAME\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "017Mepng5d6U"
+      },
+      "outputs": [],
+      "source": [
+        "# Step 1: Define your quiz questions and answers\n",
+        "questions = [\n",
+        "    {\"question\": \"What is the capital of Kenya?\", \"answer\": \"Nairobi\"},\n",
+        "    {\"question\": \"What is 2 + 2?\", \"answer\": \"4\"},\n",
+        "    {\"question\": \"What color do you get when you mix red and white?\", \"answer\": \"Pink\"},\n",
+        "]\n",
+        "\n",
+        "# Step 2: Define a method to ask a question\n",
+        "def ask_question(q, correct_answer):\n",
+        "    user_answer = input(q + \"\\nYour answer: \")\n",
+        "    if user_answer.strip().lower() == correct_answer.lower():\n",
+        "        print(\"Correct!\\n\")\n",
+        "        return True\n",
+        "    else:\n",
+        "        print(f\"Incorrect. The correct answer was {correct_answer}.\\n\")\n",
+        "        return False\n",
+        "\n",
+        "# Step 3: Run the quiz using a loop\n",
+        "def run_quiz():\n",
+        "    print(\"🎉 Welcome to Ace's Quiz Game!\\n\")\n",
+        "    score = 0\n",
+        "\n",
+        "    for item in questions:\n",
+        "        if ask_question(item[\"question\"], item[\"answer\"]):\n",
+        "            score += 1\n",
+        "\n",
+        "    print(f\"You got {score} out of {len(questions)} correct.\")\n",
+        "    print(\"Thanks for playing!\")\n",
+        "\n",
+        "# Step 4: Start the game\n",
+        "run_quiz()"
+      ]
+    }
+  ]
+}
